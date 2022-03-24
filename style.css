@@ -38,8 +38,12 @@ nav ul {
 
 /* Typography */
 
-* {
+:root {
   font-family: 'Inter';
+}
+
+*, *::before, *::after {
+  font-family: inherit;
 }
 
 h1 {
