@@ -1,59 +1,85 @@
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('assets/BebasNeue-Regular.ttf');
+  font-family: "Bebas Neue";
+  src: url("assets/BebasNeue-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
-  src: url('assets/Inter.var.woff2');
+  src: url("assets/Inter.var.woff2");
 }
 
 /* Layout */
 
 :root {
-  box-sizing: border-box;
+  --main-padding: 6vw;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-body {
+body,
+h1,
+h2,
+p {
   margin: 0;
 }
 
-img {
-  width: 100%;
-}
-
-h1 {
-  align-self: flex-start;
-}
-
-.content {
-  width: 90%;
-  margin: 0 auto;
+header,
+section,
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+header {
+  padding-top: 0.5em;
+  gap: 0.5em;
+}
+
+h1 {
+  align-self: flex-start;
+  margin-inline-start: var(--main-padding);
+}
+
+nav {
+  align-self: stretch;
+}
+
 nav ul {
   margin: 0;
-  padding: 1em;
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 1em var(--main-padding);
   gap: 1em;
-  justify-content: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+section,
+footer {
+  padding: var(--main-padding);
+  gap: 2em;
+}
+
+.hero {
+  padding-top: calc(var(--main-padding) + 2em);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  align-self: center;
+  padding: 0.8em 3em;
+  border-style: none;
+  border-radius: 0.8em;
 }
 
 /* Typography and colors */
 
 :root {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 9px;
   color: #1f2937;
 }
@@ -62,18 +88,21 @@ body {
   font-size: 1.6rem;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-family: inherit;
 }
 
 h1 {
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
   font-size: 2.8rem;
   color: #f9faf8;
   letter-spacing: 0.1em;
 }
 
-h2, blockquote {
+h2,
+blockquote {
   font-size: 3.6rem;
 }
 
@@ -88,6 +117,7 @@ blockquote {
 
 button {
   font-weight: 700;
+  font-size: 1.9rem;
 }
 
 .banner-title {
@@ -95,13 +125,21 @@ button {
   font-weight: 700;
 }
 
-.hero {
+.hero-text {
   font-size: 4.8rem;
   font-weight: 800;
   color: #f9faf8;
 }
 
-header, .lead, footer {
+h2,
+p,
+figcaption {
+  line-height: 1.4;
+}
+
+header,
+.hero,
+footer {
   background-color: #1f2937;
   color: #e5e7eb;
 }
@@ -116,10 +154,11 @@ nav a {
 }
 
 footer a {
-  color: #cdd0ff;
+  color: #2eccb0;
 }
 
-button, .banner {
+button,
+.banner {
   background-color: #3882f6;
   color: #e5e7eb;
 }
@@ -127,4 +166,3 @@ button, .banner {
 .quote {
   background-color: #e5e7eb;
 }
-
