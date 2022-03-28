@@ -19,7 +19,8 @@
 body,
 h1,
 h2,
-p {
+p,
+blockquote {
   margin: 0;
 }
 
@@ -59,6 +60,10 @@ section,
 footer {
   padding: var(--main-padding);
   gap: 2em;
+}
+
+blockquote {
+  margin-bottom: 1em;
 }
 
 .hero {
