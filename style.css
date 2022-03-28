@@ -26,6 +26,7 @@ blockquote {
 
 header,
 section,
+.banner,
 footer {
   display: flex;
   flex-direction: column;
@@ -62,8 +63,10 @@ footer {
   gap: 2em;
 }
 
-blockquote {
-  margin-bottom: 1em;
+.banner {
+  padding: 2em;
+  gap: 1em;
+  border-radius: 0.8em;
 }
 
 .hero {
@@ -79,6 +82,14 @@ button {
   padding: 0.8em 3em;
   border-style: none;
   border-radius: 0.8em;
+}
+
+.banner-title {
+  align-self: flex-start;
+}
+
+.banner button {
+  border: solid #fff 1px;
 }
 
 /* Typography and colors */
@@ -160,6 +171,10 @@ nav a {
 
 footer a {
   color: #2eccb0;
+}
+
+.banner-title {
+  color: #f9faf8;
 }
 
 button,
