@@ -95,10 +95,10 @@ img {
 }
 
 .gallery img {
-  width: 258px;
-  height: 258px;
+  width: 262px;
+  height: 262px;
   object-fit: cover;
-  border: solid #3882f6 6px;
+  border: solid #3882f6 4px;
   border-radius: 20px;
   margin-bottom: 0.5em;
 }
