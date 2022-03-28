@@ -63,6 +63,10 @@ footer {
   gap: 2em;
 }
 
+blockquote {
+  margin-bottom: 0.5em;
+}
+
 .banner {
   padding: 2em;
   gap: 1em;
