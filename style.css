@@ -82,6 +82,7 @@ blockquote {
 .gallery {
   flex-flow: row wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: 3em;
 }
 
