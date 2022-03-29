@@ -28,6 +28,7 @@ figure {
 header,
 section,
 .banner,
+.hero-content,
 .gallery,
 footer {
   display: flex;
@@ -59,10 +60,30 @@ nav ul {
   list-style-type: none;
 }
 
+@media (min-width: 720px) {
+  header {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  h1 {
+    align-self: center;
+  }
+
+  nav ul {
+    gap: 2em;
+  }
+}
+
+section,
+.hero-content,
+footer {
+  gap: 2em;
+}
+
 section,
 footer {
   padding: var(--main-padding);
-  gap: 2em;
 }
 
 blockquote {
@@ -116,7 +137,32 @@ button {
 }
 
 .banner button {
-  border: solid #fff 1px;
+  border: solid #f9faf8 1px;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: var(--main-padding) 15vw;
+    flex-direction: row;
+  }
+
+  footer {
+    padding: 2em var(--main-padding);
+  }
+
+  .hero-content {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .hero-content button {
+    align-self: flex-start;
+  }
+
+  .hero img {
+    min-width: 0;
+    flex: 1.5;
+  }
 }
 
 /* Typography and colors */
@@ -128,7 +174,7 @@ button {
 }
 
 body {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 *,
@@ -142,6 +188,10 @@ h1 {
   font-size: 2.8rem;
   color: #f9faf8;
   letter-spacing: 0.1em;
+}
+
+nav {
+  font-size: 1.5rem;
 }
 
 h2,
@@ -213,9 +263,20 @@ footer a {
 button,
 .banner {
   background-color: #3882f6;
-  color: #e5e7eb;
+  color: #f9faf8;
 }
 
 .quote {
   background-color: #e5e7eb;
+}
+
+@media (min-width: 720px) {
+  :root {
+    font-size: 10px;
+  }
+
+  nav {
+    background-color: inherit;
+    font-size: 1.7rem;
+  }
 }
